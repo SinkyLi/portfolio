@@ -1,23 +1,48 @@
-import React from "react";
+import React, { useState } from 'react';
+import Navbar from './Navbar';
+import About from './pages/About';
+import Portfolio from './pages/Portfolio';
+import Resume from './pages/Resume';
+import Contact from './pages/Contact';
 
 const styles = {
-    mainText:{
-        fontSize: '75px',
-        fontFamily: 'Pixelify Sans',
-        color: 'white',        
-        textShadow: '2px 2px 2px rgba(0,0,0,1)', 
-        background: 'linear-gradient(180deg, rgba(22,22,24,0.8547794117647058) 0%, rgba(13,13,19,1) 35%)',
-        paddingLeft: '5px',
-        marginBottom: '0px',
-        fontWeight: 'bold'
+    page: {
+      fontFamily: 'Courier',
+      fontColor: '#32292f',
+      padding: '10px',
+      height: '65vh'
     }
-}
-
-export default function Main() {
+  };
+  
+  export default function Content() {
+    const [currentPage, setCurrentPage] = useState('About');
+  
+    const renderPage = () => {
+      if (currentPage === 'About') {
+        return <About />;
+      }
+      if (currentPage === 'Portfolio') {
+        return <Portfolio />;
+      }
+      if (currentPage === 'Resume') {
+        return <Resume />;
+      }
+      return <Contact />;  
+    };
+  
+    const handlePageChange = (page) => setCurrentPage(page);
+  
     return (
-       <div>
-       <p style={styles.mainText}>sinclair li</p>   
-       </div>
- 
+      <div>
+        <div className="row" style={styles.Top} >
+        <Navbar currentPage={currentPage} handlePageChange={handlePageChange}/>  
+        </div>
+        <div className="row" style={styles.page}>
+        {renderPage()}
+        </div>
+        
+      </div>
     );
- }
+  }
+  
+  

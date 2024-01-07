@@ -1,4 +1,5 @@
 import React from "react";
+import Navbar from './Navbar';
 
 const styles = {
     headerText:{
@@ -16,7 +17,8 @@ const styles = {
 export default function Header () {
     return (
        <div>
-       <p style={styles.headerText}>sinclair li</p>    
+       <p style={styles.headerText}>sinclair li</p>
+       <p><Navbar/></p>
        </div>
     );
    }

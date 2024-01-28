@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
+import Hamburger from './Hamburger';
 import Navbar from './Navbar';
 import About from './pages/About';
 import Portfolio from './pages/Portfolio';
 import Resume from './pages/Resume';
 import Contact from './pages/Contact';
+import '../styles/Main.css';
 
 const styles = {
     page: {
@@ -14,7 +16,7 @@ const styles = {
     }
   };
   
-  export default function Content() {
+  export default function Main() {
     const [currentPage, setCurrentPage] = useState('About');
   
     const renderPage = () => {
@@ -34,8 +36,16 @@ const styles = {
   
     return (
       <div>
-        <div className="row" style={styles.Top} >
+        <div className="mobile">
+        <div className="row" style={styles.Top} >  
+        <Hamburger currentPage={currentPage} handlePageChange={handlePageChange}/>
+        Sinclair Li
+        </div>
+        </div>
+        <div className="desktop">
+        <div className="row" style={styles.Top} >  
         <Navbar currentPage={currentPage} handlePageChange={handlePageChange}/>  
+        </div>
         </div>
         <div className="row" style={styles.page}>
         {renderPage()}

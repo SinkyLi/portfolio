@@ -1,0 +1,21 @@
+*{
+    font-family: 'Courier'
+}
+
+@media (max-width: 430px) {
+    .mobile{
+        display:block;
+    }
+    .desktop{
+        display: none;
+    }
+}
+
+@media (min-width: 431px) {
+    .mobile{
+        display:none;
+    }
+    .desktop{
+        display: block;
+    }
+}

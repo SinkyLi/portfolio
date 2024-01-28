@@ -23,6 +23,9 @@ const styles = {
     borderTopLeftRadius: '5px',
     borderTopRightRadius: '5px',    
   },
+tabImage:{
+backgroundImage: "RabbitHole.jpg"
+},
   tabResume: {
     background: '#ff6392',
     borderTopLeftRadius: '5px',

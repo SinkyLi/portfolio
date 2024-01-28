@@ -1,5 +1,4 @@
 import React from "react";
-import Navbar from './Navbar';
 
 const styles = {
     headerText:{
@@ -18,7 +17,9 @@ export default function Header () {
     return (
        <div>
        <p style={styles.headerText}>sinclair li</p>
-       <p><Navbar/></p>
+       <p></p>
        </div>
     );
    }
+
+//    if desktop <Navbar/> if mobile <Hamburger/>

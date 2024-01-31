@@ -36,7 +36,16 @@ const Hamburger = ({ currentPage, handlePageChange }) => {
         </li>
         <li>
         <a
-          href="#Contact"
+          href="#misc"
+          onClick={() => handlePageChange('Miscellaneous')}
+          className={currentPage === 'Miscellaneous' ? 'nav-link active' : 'nav-link'}
+        >
+          misc
+        </a>
+        </li>
+        <li>
+        <a
+          href="#contact"
           onClick={() => handlePageChange('Contact')}
           className={currentPage === 'Contact' ? 'nav-link active' : 'nav-link'}
         >

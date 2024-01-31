@@ -21,5 +21,3 @@ export default function Header () {
        </div>
     );
    }
-
-//    if desktop <Navbar/> if mobile <Hamburger/>

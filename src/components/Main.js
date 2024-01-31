@@ -36,16 +36,16 @@ const styles = {
   
     return (
       <div>
-        <div className="mobile">
-        <div className="row" style={styles.Top} >  
-        <Hamburger currentPage={currentPage} handlePageChange={handlePageChange}/>
-        Sinclair Li
-        </div>
-        </div>
-        <div className="desktop">
-        <div className="row" style={styles.Top} >  
-        <Navbar currentPage={currentPage} handlePageChange={handlePageChange}/>  
-        </div>
+        <div className="row"> 
+          <div className="mobile">
+            <div className="col">         
+              <Hamburger currentPage={currentPage} handlePageChange={handlePageChange}/>            
+            </div>
+            <div className="col">sinclair li</div>
+          </div>
+          <div className="desktop"> 
+            <Navbar currentPage={currentPage} handlePageChange={handlePageChange}/>  
+          </div>
         </div>
         <div className="row" style={styles.page}>
         {renderPage()}

@@ -2,6 +2,11 @@
     font-family: 'Courier'
 }
 
+.wrapper {
+    margin: 5px;
+    padding: 5px;
+}
+
 @media (max-width: 430px) {
     .mobile{
         display:block;

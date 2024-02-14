@@ -1,15 +1,13 @@
 *{
     font-family: 'Courier';
-    padding: .5%;
-    margin: .5%;
 }
 
 @media (max-width: 430px) {
     .mobile{
-        display:inline-flex;
+        display:flex;
     }
     .desktop{
-        display: none;
+        display:none;
     }
 }
 
@@ -18,6 +16,6 @@
         display:none;
     }
     .desktop{
-        display: inline-flex;
+        display:flex;
     }
 }

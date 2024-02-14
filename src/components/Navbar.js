@@ -2,7 +2,7 @@ import React from 'react';
 
 const styles = {
   menu: {
-    justifyContent: 'flex-end',
+    justifyContent: 'right',
     textAlign: 'right',
     backgroundColor: '#0d0d13',
     fontFamily: 'Courier',
